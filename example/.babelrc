@@ -1,0 +1,3 @@
+{
+  "plugins": [["mova-babel-plugin-i18n", {"fallbackLangs": {"be": ["en"]}}]]
+}

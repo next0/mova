@@ -1,0 +1,6 @@
+{
+  "lang": "en",
+  "langs": ["en", "cs"],
+  "prettierConfigPath": ".prettierrc.json",
+  "src": "examples"
+}
