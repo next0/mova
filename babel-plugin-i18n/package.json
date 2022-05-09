@@ -1,6 +1,6 @@
 {
   "name": "mova-babel-plugin-i18n",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "i18n tool",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
