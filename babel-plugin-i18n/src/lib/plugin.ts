@@ -9,10 +9,10 @@ export interface MovaBabelPluginOptions {
     hashLen?: number;
 }
 
-const DEFAULT_LANG = process.env.LANG || 'en';
-const DEFAULT_HASH_LEN = 4;
-
 export function plugin(): PluginObj<PluginPass & { opts: MovaBabelPluginOptions }> {
+    const DEFAULT_HASH_LEN = 4;
+    const DEFAULT_LANG = process.env.LANG || 'en';
+
     return {
         name: 'mova-babel-plugin-i18n',
         visitor: {
@@ -71,7 +71,14 @@ export function plugin(): PluginObj<PluginPass & { opts: MovaBabelPluginOptions 
                     const importPath = node.source.value;
 
                     if (importPath.endsWith('.i18n')) {
-                        this._movaTransformationEnabled = true;
+                        const specs = node.specifiers;
+                        const spec: t.ImportSpecifier | undefined =
+                            specs.length === 1 && t.isImportSpecifier(specs[0]) ? specs[0] : undefined;
+
+                        if (spec && spec.imported && t.isIdentifier(spec.imported) && spec.imported.name === 'i18n') {
+                            // import { i18n } from 'path/to/Component/Component.i18n';
+                            this._movaTransformationEnabled = true;
+                        }
                     }
                 }
             },

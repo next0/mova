@@ -1,6 +1,6 @@
 {
   "name": "mova-babel-plugin-i18n",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "i18n tool",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -26,7 +26,7 @@
   "devDependencies": {
     "@babel/generator": "7.17.9",
     "@babel/plugin-transform-typescript": "7.16.8",
-    "mova-i18n": "1.0.0",
+    "mova-i18n": "1.0.4",
     "@rollup/plugin-typescript": "8.3.2",
     "@types/jest": "27.4.1",
     "@zerollup/ts-transform-paths": "1.7.18",
