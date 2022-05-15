@@ -1,6 +1,6 @@
 {
   "name": "mova-watcher",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "i18n watcher tool",
   "type": "module",
   "bin": "./bin/watcher.js",
@@ -45,7 +45,7 @@
     "@babel/preset-react": "7.16.7",
     "@babel/preset-typescript": "7.16.7",
     "@babel/traverse": "7.17.9",
-    "mova-i18n": "1.0.4",
+    "mova-i18n": "1.0.5",
     "prettier": "2.6.2"
   }
 }

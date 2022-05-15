@@ -11,6 +11,8 @@ export interface MovaWatcherConfig {
     langs: MovaLang[];
     prettierConfigPath: string;
     src: string;
+    include?: string[];
+    exclude?: string[];
 }
 
 export interface MovaWatcherInternalConfig extends MovaWatcherConfig {

@@ -18,6 +18,14 @@ function _log(event: string, filename: string, time: number, processed: boolean)
 }
 
 async function _processFile(event: string, filename: string, config: MovaWatcherInternalConfig): Promise<void> {
+    if (config.include && config.include.every((path) => !filename.startsWith(path))) {
+        return;
+    }
+
+    if (config.exclude && config.exclude.some((path) => filename.startsWith(path))) {
+        return;
+    }
+
     if ((filename.endsWith('.ts') || filename.endsWith('.tsx')) && !filename.endsWith('.i18n.ts')) {
         const start = Date.now();
         const { sourceModified, storeModified } = await processSourceFile(filename, config);
