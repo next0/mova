@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "mova-i18n": "1.0.5",
+    "mova-i18n": "1.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "web-vitals": "2.1.4"
@@ -43,8 +43,8 @@
     "@types/node": "16.11.26",
     "@types/react": "17.0.40",
     "@types/react-dom": "17.0.13",
-    "mova-babel-plugin-i18n": "1.0.5",
-    "mova-watcher": "1.0.5",
+    "mova-babel-plugin-i18n": "1.0.6",
+    "mova-watcher": "1.0.6",
     "customize-cra": "1.0.0",
     "prettier": "2.6.0",
     "react-app-rewired": "2.2.1",
