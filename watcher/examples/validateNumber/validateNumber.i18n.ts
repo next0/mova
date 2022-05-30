@@ -2,6 +2,9 @@ import { i18n as i18nBuilder, keyset, plurals, MovaLang } from 'mova-i18n';
 
 const translates = keyset({
     'Value must be a number': {
+        _meta: {
+            context: 'Validation message under form input control',
+        },
         en: 'Value must be a number',
         cs: '',
     },

@@ -1,9 +1,9 @@
-import { forms } from 'mova-i18n';
+import { forms, MovaPluralTranslateKey } from 'mova-i18n';
 import type { MovaLang, MovaTranslateValue, MovaTranslate, MovaWatcherInternalConfig } from 'types';
 
 function _generatePluralValue(text: string, lang: MovaLang): MovaTranslate | undefined {
     if (forms[lang]) {
-        return forms[lang].reduce((memo, name) => {
+        return (forms[lang] as MovaPluralTranslateKey[]).reduce((memo, name) => {
             memo[name] = text;
 
             return memo;
